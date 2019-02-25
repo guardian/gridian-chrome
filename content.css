@@ -1,0 +1,55 @@
+x-gu-overlay {
+	position: fixed;
+	z-index: 99999999;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	opacity: 0.25;
+	background-position: center;
+	pointer-events: none;
+	max-width: 1300px;
+	background: repeating-linear-gradient(
+		to right,
+		tomato 00px,
+		tomato 20px,
+		rgba(255, 255, 255, 0) 20px,
+		rgba(255, 255, 255, 0) 80px
+	);
+}
+
+@media (max-width: 1300px) {
+	x-gu-overlay {
+		max-width: 1140px;
+	}
+}
+@media (max-width: 1140px) {
+	x-gu-overlay {
+		max-width: 980px;
+	}
+}
+@media (max-width: 980px) {
+	x-gu-overlay {
+		max-width: 740px;
+		background: repeating-linear-gradient(
+			to right,
+			tomato 00px,
+			tomato 20px,
+			rgba(255, 255, 255, 0) 20px,
+			rgba(255, 255, 255, 0) 60px
+		);
+	}
+}
+@media (max-width: 740px) {
+	x-gu-overlay {
+		background: transparent;
+		box-shadow: inset 20px 0 0 0 tomato, inset -20px 0 0 0 tomato;
+	}
+}
+@media (max-width: 480px) {
+	x-gu-overlay {
+		background: transparent;
+		box-shadow: inset 10px 0 0 0 tomato, inset -10px 0 0 0 tomato;
+	}
+}
